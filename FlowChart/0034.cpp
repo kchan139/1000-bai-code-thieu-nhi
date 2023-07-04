@@ -8,8 +8,8 @@ int main ()
     unsigned int n; cin >> n;
 
     double sum = 0;
-    for (int i = n - 1; i >= 0; i--)
-        sum = sqrt((n - i) + sum);
+    for (unsigned int i = n; i > 0; i--)
+        sum = sqrt((n - i + 1) + sum);
     
     cout << "S(n) = " << sum << endl;
 
