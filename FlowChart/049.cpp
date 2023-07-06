@@ -2,15 +2,14 @@
 using namespace std;
 
 int main ()
-{   
+{
     cout << "n: ";
     unsigned int n; cin >> n;
 
-    double sum = 0;
-    for (int i = 2; i <= 2*n; i += 2)
-        sum += 1.0 / i;
+    while (n / 10)
+        n /= 10;
     
-    cout << "S(n) = " << sum << endl;
+    cout << "First digit: " << n << endl;
 
     return 0;
 }
