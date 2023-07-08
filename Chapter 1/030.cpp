@@ -8,8 +8,7 @@ int main ()
 
     unsigned int sum = 0;
     for (unsigned int i = 1; i < n; i++)
-        if (!(n % i))
-            sum += i;
+        if (!(n % i)) sum += i;
 
     (sum == n)? cout << n << " is " : cout << n << " is not ";
     cout << "a perfect number" << endl;
