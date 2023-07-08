@@ -8,7 +8,7 @@ int main ()
     double x; unsigned int n;
     cin >> x >> n;
 
-    double sum = 0;
+    double sum = x;
     for (unsigned int i = 1; i <= n; i++)
     {
         unsigned int j = 2*i + 1;
@@ -17,7 +17,7 @@ int main ()
         while (j)
             tmpFactorial *= j--;
 
-        sum += pow(-1, i + 1) * (pow(x, 2*i + 1) / tmpFactorial);
+        sum += pow(-1, i) * (pow(x, 2*i + 1) / tmpFactorial);
     }
 
     cout << "S(x, n) = " << sum << endl;
