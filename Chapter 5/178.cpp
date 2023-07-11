@@ -3,10 +3,13 @@ using namespace std;
 
 void listInRange (int * arr, unsigned int size, int x, int y)
 {
+    string result = "";
     for (unsigned int i = 0; i < size; i++)
         if (arr[i] >= x && arr[i] <= y)
-            cout << arr[i] << " ";
-    cout << endl;
+            result += to_string(arr[i]) + " ";
+            
+    (result.length())?
+        cout << result << endl : cout << "Not found" << endl;
 }
 
 int main ()

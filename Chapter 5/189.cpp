@@ -1,13 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void listNegative (double * arr, unsigned int size)
+bool isFirstDigitOdd (int n)
+{
+    while (n / 10) n /= 10;
+    return n & 1;
+}
+
+void listFirstDigitOdd (int * arr, unsigned int size)
 {
     string result = "";
     for (unsigned int i = 0; i < size; i++)
-        if (arr[i] < 0)
+        if (isFirstDigitOdd(arr[i]))
             result += to_string(arr[i]) + " ";
-            
+        
     (result.length())?
         cout << result << endl : cout << "Not found" << endl;
 }
@@ -18,11 +24,12 @@ int main ()
     unsigned int size; cin >> size;
 
     cout << "Elements: ";
-    double arr[size];
+    int arr[size];
     for (unsigned int i = 0; i < size; i++)
         cin >> arr[i];
 
-    listNegative (arr, size);
+    cout << "Elements with first digit odd: ";
+    listFirstDigitOdd (arr, size);
 
     return 0;
 }
