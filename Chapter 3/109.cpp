@@ -4,10 +4,10 @@ using namespace std;
 
 int main ()
 {
-    cout << setw (108) << left << "MULTIPLICATION TABLE: " << endl;
+    cout << "MULTIPLICATION TABLE: " << endl;
     for (unsigned short i = 1; i <= 10; i++)
     {
-        for (unsigned int j = 1; j <= 9; j++)
+        for (unsigned short j = 1; j <= 9; j++)
         {
             string ii = to_string(i), jj = to_string(j);
             cout << setw(12) << left << 
