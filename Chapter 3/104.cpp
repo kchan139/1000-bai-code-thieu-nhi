@@ -10,7 +10,7 @@ int main ()
     unsigned short dayCount = day;
     unsigned short daysInMonths[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     
-    if (!(year % 400) || !(year % 100) || !(year % 4))
+    if (!((year % 400) && (year % 100) && (year % 4)))
         daysInMonths[2] = 29;
 
     for (unsigned short i = 1; i < month; i++)

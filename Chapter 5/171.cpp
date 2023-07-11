@@ -7,7 +7,7 @@ int gcd (int a, int b)
     return gcd (b, a % b);
 }
 
-int findGCD (int * arr, unsigned int size)
+int greatestCommonDivisor (int * arr, unsigned int size)
 {
     int result = arr[0];
     for (unsigned int i = 1; i < size; i++)
@@ -28,7 +28,7 @@ int main ()
     for (unsigned int i = 0; i < size; i++) 
         cin >> arr[i];
 
-    cout << "GCD: " << findGCD (arr, size) << endl;
+    cout << "Greatest common divisor: " << greatestCommonDivisor (arr, size) << endl;
 
     return 0;
 }

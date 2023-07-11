@@ -20,15 +20,15 @@ int main() {
     {
         switch (hundredsDigit) 
         {
-            case 1: cout << "One Hundred "; break;
-            case 2: cout << "Two Hundred "; break;
+            case 1: cout << "One Hundred ";   break;
+            case 2: cout << "Two Hundred ";   break;
             case 3: cout << "Three Hundred "; break;
-            case 4: cout << "Four Hundred "; break;
-            case 5: cout << "Five Hundred "; break;
-            case 6: cout << "Six Hundred "; break;
+            case 4: cout << "Four Hundred ";  break;
+            case 5: cout << "Five Hundred ";  break;
+            case 6: cout << "Six Hundred ";   break;
             case 7: cout << "Seven Hundred "; break;
             case 8: cout << "Eight Hundred "; break;
-            case 9: cout << "Nine Hundred "; break;
+            case 9: cout << "Nine Hundred ";  break;
         }
     }
 
