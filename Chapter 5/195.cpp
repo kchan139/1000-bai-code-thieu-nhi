@@ -2,13 +2,21 @@
 #include <algorithm>
 using namespace std;
 
-void listElements(double *arr, unsigned int size) {
+bool findValue (double * arr, unsigned int size, double value)
+{
+    for (unsigned int i = 0; i < size; i++)
+        if (arr[i] == value)
+            return true;
+    return false;
+}
+
+void listElements(double * arr, unsigned int size) {
     bool found = false;
     for (unsigned int i = 0; i < size; i++)
     {
         for (unsigned int j = i + 1; j < size; j++) 
         {
-            if (find(arr, arr + size, arr[i] + arr[j]) != arr + size)
+            if (findValue(arr, size, arr[i] + arr[j]))  //(find(arr, arr + size, arr[i] + arr[j]) != arr + size)
             {
                 cout << "("  << arr[i] + arr[j] 
                      << ", " << arr[i] 
