@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 bool isPrime (int n)
@@ -11,10 +12,17 @@ bool isPrime (int n)
 
 void sortPrime (int * arr, unsigned int size)
 {
+    vector<int> primeIndex;
     for (unsigned int i = 0; i < size; i++)
-    {
-        
-    }
+        if (isPrime(arr[i]))
+            primeIndex.push_back(i);
+
+    int vtsize = primeIndex.size();
+
+    for (int i = 0; i < vtsize - 1; i++)
+        for (int j = i + 1; j < vtsize; j++)
+            if (arr[primeIndex[i]] > arr[primeIndex[j]])
+                swap (arr[primeIndex[i]], arr[primeIndex[j]]);
 }
 
 void printArr (int * arr, unsigned int size)

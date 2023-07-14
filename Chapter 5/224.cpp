@@ -3,8 +3,8 @@ using namespace std;
 
 bool isPerfect (int n)
 {
-    int sum = 0;
-    for (int i = 1; i*i <= n; i++)
+    int sum = 1;
+    for (int i = 2; i*i <= n; i++)
     {
         if (!(n % i))
         {
@@ -13,7 +13,7 @@ bool isPerfect (int n)
             else sum += i + n / i;
         }
     }
-    return sum == n;
+    return (sum == n && n != 1);
 }
 
 int countPerfect (int * arr, unsigned int size)
